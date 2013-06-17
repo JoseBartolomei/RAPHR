@@ -1,0 +1,350 @@
+\documentclass[12pt,letterpaper]{beamer}
+\usetheme{Madrid}
+\usecolortheme[RGB={205, 100, 250}]{structure}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+
+\author{Jos\'e A. Bartolomei-D\'iaz, PhD\\
+\institution{\textbf{Outcome Project} \\ 
+jose.bartolomei@outcomeproject.com}}}
+\title{Reproducible Analysis in Public Health Research:\\
+\small{individuals in addition to the author can recreate all of the computations described in a body of work.}
+}
+\date{ March 21, 2013}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Title}
+\begin{frame}
+\titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{objectives}
+%\begin{frame}{Objectives}
+%\begin{block}{}
+%Introduce concepts and the importance of reproducible analysis in public health research
+%\end{block}
+%\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\begin{block}{Research Scenarios}
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Imagine....}
+\setbeamercovered{transparent}
+\begin{itemize}
+
+\item<1> ... a scientific report for pubic health policy. Dozens of calculations, graphs, regression modeling.  Suddenly, the data provider told you that there was a mistake in data delivery (duplicates, wrong coding, bad weighting or many other). \\
+
+\item<2> ... after conducting your research analysis and your paper is in journal review one of the reviewer told you that your population distribution does not follow a normal distribution but negative binomial and all your methods are wrong.
+
+\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{Imagine}
+\setbeamercovered{transparent}
+\begin{itemize}
+
+\item<1> ... You read a revealing research of a foreign country that showed a meaningfully and positive impact in the study population and you want to measure that impact in your Country. 
+
+\item<2> ... Suddenly, many really, really, doubt your study results.
+
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Los_estudios_y_sus_errores}}
+\begin{frame}{Real Live Example}
+\begin{block}{El Nuevo D\'ia, 26 de febrero de 2013}
+\end{block}
+\begin{block}{Los estudios y sus errores}
+\setbeamercovered{transparent}
+\begin{itemize}[<+->]
+\item \– Hasta hace poco, el anestesi\'{o}logo alem\'{a}n Joachim Boldt era un reconocido especialista en la administraci\'{o}n de l\'{i}quidos intravenosos.
+\item Recientemente se descubri\'{o} que cerca de 90 de sus trabajos tienen errores y en una docena de ellos las publicaciones se han retractado por mala praxis, incluida la falsificaci\'{o}n de datos.......
+\item \textcolor{red}{Pero el da\~no ya est\'{a} hecho.} \cite{Estudios_Errores}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Economist}
+\begin{frame}{Real Live Example}
+\begin{block}{The Economist, September 10, 2011}
+\end{block}
+
+\begin{block}{Misconduct in science: An array of errors}
+\setbeamercovered{transparent}
+\begin{itemize}[<+->]
+
+\item Anil Potti and their colleagues at Duke University in Durham, North Carolina, garnered widespread attention in 2006. 
+
+\item They reported in the New England Journal of Medicine that they could predict the course of a patient's lung cancer using devices called expression arrays.\\
+
+\item His work looked like a tremendous advance for personalized medicine the idea that understanding the molecular specifics of an individual's illness will lead to a tailored treatment.\\
+
+\item The papers drew adulation from other workers in the field, and many newspapers.
+
+\end{itemize}
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Economist_B}
+\begin{frame}{The Economist, September 10, 2011}
+\begin{block}{Misconduct in science: An array of errors}
+\setbeamercovered{transparent}
+\begin{itemize}[<+->]
+
+\item D Anderson Cancer Centre in Houston, had begun to find serious flaws in the work.
+\begin{itemize}
+\item mislabeled the cell lines they used to derive their chemotherapy prediction model, describing those that were sensitive as resistant, and vice versa among many other flaws.
+\item Patients whose doctors relied on this paper would end up being given a drug they were less likely to benefit from instead of more likely.
+\end{itemize}
+
+\item July 2010, a letter reported that Dr. Potti \textcolor{red}{had lied in numerous documents and grant applications.}
+
+\cite{Array_Errors}
+
+\end{itemize}
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\begin{block}{Baggerly, et.al (2004) \cite{pmid14751995}}
+
+``Unfortunately, poor documentation can shift from an inconvenience to an active danger when it obscures not just methods but errors".
+
+\end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Scenario Results}
+\begin{block}{Lost of:}
+\begin{itemize}
+
+\item time
+\item money
+\item credibility
+\item opportunity to share knowledge
+\item advancement in public health
+
+\end{itemize}
+\textbf{Overall lost of productivity and cost-effectiveness}
+
+\end{block}
+
+\begin{block}{How do we improve?}
+\end{block}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Reproducibility is:}
+\begin{block}{}
+\begin{itemize}
+\item The ultimate standard by which scientific claims are judged.  \cite{PengR_2011}
+
+\item With replication, independent investigators address a scientific hypothesis and build up evidence for or against it. \cite{PengR_2011}
+
+\item One of the nine causal criteria in epidemiological studies. \cite{Rothman_1998B}
+
+\end{itmeize}
+\end{block}
+\begin{block}{But!, how do we create...}
+Reproducible Analysis in Public Health Research?
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Computation}
+%\begin{block}{}
+%\begin{itemize}
+
+%\item Computation is any type of calculation or use of computing technology in information processing.
+%\item Computation is a process following a well-defined model understood and expressed
+
+%\end{itemize}
+%\end{block}
+%\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Literate Programming}
+\begin{block}{}
+\begin{itemize}
+
+\item A methodology that combines a programming language with a documentation language, thereby making programs more:
+\begin{itemize}
+\item robust, 
+\item portable, 
+\item easily maintained, 
+\item and arguably more fun to write than programs that are written only in a high-level language.
+\end{itemize}
+
+\item The main idea is to treat a program as a piece of literature, addressed to human beings rather than to a computer. \cite{Knuth:1983:LP}
+
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Barriers}
+\begin{block}{Traditional Tools and Working Styles}
+\begin{enumerate}
+
+\item Tools: 
+\begin{itemize}
+\item Copy and paste tools for research
+
+\item No code available
+\end {itemize}
+\item Lack of a deeply ingrained culture that simply requires reproducibility for all scientific claims.
+
+\item Journals want to publish.
+
+\item The process of peer review relies (as it always has done) on the goodwill of workers in the field, who have jobs of their own and frequently cannot spend the time needed to check other people's papers in a suitably thorough manner. (The economist)
+
+\end{enumerate}
+\end{block}
+\end{frame}
+
+%
+\begin{frame}{Solutions}
+\begin{block}{Code Based Tools and Structured Working Style}
+\begin{enumerate}
+
+\item Changing the behavior of the software systems themselves. 
+
+\item Getting researchers to use other software systems that are more amenable to reproducibility. 
+
+\end{enumerate}
+\end{block}
+\end{frame}
+
+%
+\section{TechTools}
+\begin{frame}
+\footnotesize
+\begin{table}[ht]
+\caption{Working Style \& Technological Tools}
+\begin{tabular}{ l l l}
+\hline\hline
+\textbf{Categories} & Non-Reproducible & Reproducible \\
+\hline\hline
+\textbf{Type Setting}   & MS. Word			& LaTex			 \\ 
+\textbf{Spread Sheet} 		& MS. Excel		& None			 \\ 
+\textbf{Presentation}		& MS. Power Point  	& LaTex-Beamer/R \\ 
+\textbf{Statistical Syst.}& Splus/EpiInfo/SPSS  & R \tiny \\ 
+\textbf{GIS} 				& ArcInfo/SigEpi   	& R   \\ 
+\textbf{Graphics}			& MS. Excel/Power Point  &  R  \\
+\textbf{IDE}				& None  			& RStudio / TexMaker  \\
+\textbf{cvs}				& None 				& Git \\
+\textbf{Internet Browser}	& Internet Explorer		& Mozilla Firefox \\
+\hline \textbf{Work Style}			& Point/Click \& Copy/Paste			& Codes   \\
+							& Unstructured/Discontinuous & Structured/Continuous \\
+\hline \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Benefits}
+\begin{block}{Uses and Implications}
+
+\begin{enumerate}
+
+\item Encapsulate the actual work of the author, not just an abridged version.
+
+\item Allow different levels of detail to be displayed in different derived documents.
+%\item they are easy to re-run by any interested reader, potentially with different inputs;
+\item Providing explicit computational details they make it easier for others to adapt and extend the reported methodology.
+%\item they enable the programmatic construction of plots and tables (in contrast with most of the current methods that are equivalent to cut and paste method ologies and have the associated problems) \cite{Gentleman_SARR_2004}
+
+\end{enumerate}
+\end{block}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Importance}
+\begin{block}{}
+\begin{enumerate}
+
+\item In cases in which \textcolor{red}{questionable results} are obtained, reproducibility is critical to tracking down the ``bugs" of computational science. 
+
+\item In cases with interesting findings, reproducibility can greatly facilitate building on those findings.
+
+\end{enumerate}
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Biostatistic Journal Editorial}
+\begin{itemize}[<+->]
+\item``Our aim was not to police the technical correctness of published work but rather to recognize that a nontrivial statistical analysis involves many decisions by the analyst that are open to debate...
+
+\item This is especially true in more complex analyses, for example, in a Bayesian analysis using Markov chain Monte Carlo that involves choices about the prior, the sampler, the burn-in, and the convergence criteria. All these may affect the inference drawn from the data, and the reader would be well served by being given the ability to find out". \cite{Diggle_2010Biostatistic}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{My Perspective}
+\begin{itemize}
+\item \huge{Computational Epidemiology}
+\item \huge{Computational Biostatistics}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\begin{frame}{}
+\begin{itemize}
+\item \Huge{Example}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\bibliographystyle{plain}  % (uses file "plain.bst")
+\bibliography{/media/truecrypt2/ORP/Presentations/RAPHR/Ref_RAPHR.bib}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{frame}{Literate Programming Tools}
+\begin{block}{}
+
+The software environment for working with compendiums requires relatively few tools. \cite{Gentleman_SARR_2004}
+\begin{enumerate}
+\item \textbf{Authoring Software:} tools to enable the author to integrate code and textual descriptions in a narrative fashion to create the dynamic documents;
+\item \textbf{Auxiliary Software:} a mechanism for organizing the supporting or auxiliary software and data such as C code, S functions, documentation and datasets so that they can be combined with the dynamic document;
+\item \textbf{Transformation Software:} tools for processing the compendium to yield different outputs, typically involving transformations of the dynamic document(s);
+\end{enumerate}
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{frame}{Literate Programming Tools}
+\begin{block}{}
+
+The software environment for working with compendiums requires relatively few tools. \cite{Gentleman_SARR_2004}
+\begin{enumerate}
+\item \textbf{Quality Control Software:} tools for testing and validating a compendium, for both the author and the reader;
+\item  \textbf{Distribution Software:} tools for distributing the compendiums and for managing them on both the client side (access the documentation, code and data) and the server side (organization and versioning).
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\end{document}
